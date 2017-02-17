@@ -1,0 +1,40 @@
+{
+  "name": "aggregatejs",
+  "version": "0.0.1",
+  "description": "Aggregate functions returning single result based on groups of data",
+  "main": "index.js",
+  "directories": {
+    "test": "test",
+    "lib": "lib"
+  },
+  "keywords": [
+    "aggregation",
+    "average",
+    "count",
+    "max",
+    "min",
+    "percentile",
+    "sum"
+  ],
+  "scripts": {
+    "test": "tape test/*.js | tap-spec",
+    "test-cov": "nyc npm test",
+    "report-cov": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yefremov/aggregatejs.git"
+  },
+  "author": "Anton Yefremov <anton.yefremov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yefremov/aggregatejs/issues"
+  },
+  "homepage": "https://github.com/yefremov/aggregatejs#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.16",
+    "nyc": "^10.1.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  }
+}
