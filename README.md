@@ -5,6 +5,12 @@
 
 A set of statistical and mathematical aggregation functions written in JavaScript.
 
+## Installation
+
+```bash
+$ npm install --save callasync
+```
+
 ## Running tests
 
 ```bash
