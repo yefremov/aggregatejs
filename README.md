@@ -8,7 +8,7 @@ A set of statistical and mathematical aggregation functions written in JavaScrip
 ## Installation
 
 ```bash
-$ npm install --save callasync
+$ npm install --save aggregatejs
 ```
 
 ## Running tests
