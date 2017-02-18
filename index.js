@@ -1,7 +1,13 @@
 
-exports.average = require("./lib/average");
-exports.count = require("./lib/count");
-exports.max = require("./lib/max");
-exports.min = require("./lib/min");
-exports.percentile = require("./lib/percentile");
-exports.sum = require("./lib/sum");
+/**
+ * Expose aggregate functions.
+ */
+
+module.exports = {
+  average: require("./average"),
+  count: require("./count"),
+  max: require("./max"),
+  min: require("./min"),
+  percentile: require("./percentile"),
+  sum: require("./sum")
+};
