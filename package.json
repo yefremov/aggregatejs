@@ -1,6 +1,6 @@
 {
   "name": "aggregatejs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Aggregate functions returning single result based on groups of data",
   "main": "index.js",
   "directories": {
