@@ -1,5 +1,5 @@
 var test = require('tape');
-var max = require('../').max;
+var max = require('../max');
 
 test('max(array)', function (t) {
   t.equals(max([100, -100, 150, -50, 250, 100]), 250, 'should be equal 250');

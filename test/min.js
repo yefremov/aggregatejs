@@ -1,5 +1,5 @@
 var test = require('tape');
-var min = require('../').min;
+var min = require('../min');
 
 test('min(array)', function (t) {
   t.equals(min([100, -100, 150, -50, 250, 100]), -100, 'should be equal -100');

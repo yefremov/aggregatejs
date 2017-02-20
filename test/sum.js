@@ -1,5 +1,5 @@
 var test = require('tape');
-var sum = require('../').sum;
+var sum = require('../sum');
 
 test('sum(array)', function (t) {
   t.equals(sum([100, -100, 150, -50, 100, 250]), 450, 'should be equal 450');
