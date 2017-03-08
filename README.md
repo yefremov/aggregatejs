@@ -9,13 +9,12 @@ A set of statistical and mathematical aggregation functions written in JavaScrip
 ## Installation
 
 ```bash
-$ npm install --save aggregatejs
+$ npm install aggregatejs
 ```
 
 ## Running tests
 
 ```bash
-$ npm install
 $ npm test
 ```
 
