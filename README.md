@@ -8,6 +8,20 @@ A set of statistical and mathematical aggregation functions written in JavaScrip
 $ npm install aggregatejs
 ```
 
+## Example
+
+```js
+const aggregate = require('aggregatejs');
+const sum = require('aggregatejs/sum');
+
+aggregate.average([100, -100, 150, -50, 100, 250]);
+// => 75
+
+sum([100, -100, 150, -50, 100, 250]);
+// => 450
+
+```
+
 ## Running tests
 
 ```bash
