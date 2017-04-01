@@ -11,15 +11,26 @@ $ npm install aggregatejs
 ## Example
 
 ```js
-const aggregate = require('aggregatejs');
-const sum = require('aggregatejs/sum');
+import average from 'aggregatejs/average';
+import sum from 'aggregatejs/sum';
 
-aggregate.average([100, -100, 150, -50, 100, 250]);
+average([100, -100, 150, -50, 100, 250]);
 // => 75
 
 sum([100, -100, 150, -50, 100, 250]);
 // => 450
 
+```
+
+## API
+
+### average
+
+Returns the average of the numbers in `array`
+
+```js
+let value = average([100, -100, 150, -50, 100, 250]);
+// => 75
 ```
 
 ## Running tests
