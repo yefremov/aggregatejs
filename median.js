@@ -13,7 +13,7 @@ module.exports = median;
  * @example
  *
  * median([100, -100, 150, -50, 100, 250]);
- * // => 75
+ * // => 100
  */
 
 function median(array) {
@@ -29,9 +29,5 @@ function median(array) {
 
   var middle = Math.floor(length / 2);
 
-  if (length % 2) {
-    return array[middle];
-  } else {
-    return (array[middle] + array[middle - 1]) / 2
-  }
+  return length % 2 ? array[middle] : (array[middle] + array[middle - 1]) / 2;
 }
