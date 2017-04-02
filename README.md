@@ -94,6 +94,15 @@ let value = sum([100, -100, 150, -50, 100, 250]);
 // => 450
 ```
 
+### median
+
+Returns the median of the numbers in `array`.
+
+```js
+let value = median([100, -100, 150, -50, 100, 250]);
+// => 100
+```
+
 ## Running tests
 
 ```bash
