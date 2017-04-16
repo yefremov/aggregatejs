@@ -103,6 +103,24 @@ let value = median([100, -100, 150, -50, 100, 250]);
 // => 100
 ```
 
+### variance
+
+Returns the variance population of the numbers in `array`.
+
+```js
+let value = variance([2, 4, 4, 4, 5, 5, 7, 9]);
+// => 4
+```
+
+### deviation
+
+Returns the standard deviation of the numbers in `array`.
+
+```js
+let value = deviation([2, 4, 4, 4, 5, 5, 7, 9]);
+// => 2
+```
+
 ## Running tests
 
 ```bash
