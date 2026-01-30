@@ -220,6 +220,43 @@ deviation([2, 4, 4, 4, 5, 5, 7, 9]);
 - `RangeError` if array is empty
 - `TypeError` if array contains non-numeric or non-finite values
 
+### Correlation and Covariance
+
+#### correlation
+
+Returns the Pearson correlation coefficient between two arrays of numbers. The correlation measures the strength and direction of a linear relationship between two variables, ranging from -1 (perfect negative correlation) to 1 (perfect positive correlation). A value of 0 indicates no linear correlation.
+
+```js
+correlation([1, 2, 3, 4, 5], [2, 4, 6, 8, 10]);
+// => 1 (perfect positive correlation)
+
+correlation([1, 2, 3, 4, 5], [5, 4, 3, 2, 1]);
+// => -1 (perfect negative correlation)
+
+correlation([1, 2, 3, 4, 5], [1, 3, 2, 5, 4]);
+// => 0.1 (weak correlation)
+```
+
+**Throws:**
+- `RangeError` if arrays are empty, have different lengths, or contain only constant values (zero standard deviation)
+- `TypeError` if arrays contain non-numeric or non-finite values
+
+#### covariance
+
+Returns the population covariance between two arrays of numbers. Covariance measures how two variables change together. Positive values indicate that both variables tend to increase together, while negative values indicate an inverse relationship.
+
+```js
+covariance([1, 2, 3, 4, 5], [2, 4, 6, 8, 10]);
+// => 4
+
+covariance([1, 2, 3], [3, 2, 1]);
+// => -1
+```
+
+**Throws:**
+- `RangeError` if arrays are empty or have different lengths
+- `TypeError` if arrays contain non-numeric or non-finite values
+
 ### Specialized Means
 
 #### geometricMean

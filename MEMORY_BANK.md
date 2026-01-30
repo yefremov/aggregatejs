@@ -1,7 +1,7 @@
 # Memory Bank - aggregatejs Project
 
-**Last Updated:** 30/01/2026, 9:43 am (Europe/Riga, UTC+2:00)  
-**Version:** 1.0.0  
+**Last Updated:** 30/01/2026, 10:04 am (Europe/Riga, UTC+2:00)  
+**Version:** 1.0.0+ (Unreleased)  
 **Repository:** https://github.com/yefremov/aggregatejs
 
 ---
@@ -36,7 +36,7 @@
 | `CHANGELOG.md` | Version history and migration guide | ✅ New |
 | `LICENSE` | MIT License | ✅ Active |
 
-### Aggregation Functions (14 total)
+### Aggregation Functions (16 total)
 
 | Function | Source File | Description | Input | Output | New in v1.0.0 |
 |----------|-------------|-------------|-------|--------|---------------|
@@ -54,10 +54,12 @@
 | `range` | `src/range.ts` | Max - Min | number[] | number | ⭐ NEW |
 | `sum` | `src/sum.ts` | Sum of all values | number[] | number | ✅ Improved |
 | `variance` | `src/variance.ts` | Variance population | number[] | number | ✅ Improved |
+| `correlation` | `src/correlation.ts` | Pearson correlation coefficient | number[], number[] | number | ⭐ NEW |
+| `covariance` | `src/covariance.ts` | Population covariance | number[], number[] | number | ⭐ NEW |
 
 ### Test Files
 
-Located in `test/` directory - **88 tests, all passing ✅**
+Located in `test/` directory - **122 tests, all passing ✅**
 
 Each function has comprehensive test coverage including:
 - Normal operation with various inputs
@@ -240,6 +242,14 @@ test('functionName()', (t) => {
 
 ## 🎯 Current Status
 
+### Unreleased (Post v1.0.0)
+
+**New Features:**
+- ✅ `correlation()` function - Pearson correlation coefficient (GitHub issue #8)
+- ✅ `covariance()` function - Population covariance between two arrays
+- ✅ Comprehensive test coverage (122 tests, all passing)
+- ✅ Full documentation in README.md and CHANGELOG.md
+
 ### v1.0.0 Release (2026-01-30) ✅
 
 **Completed Features:**
@@ -247,7 +257,7 @@ test('functionName()', (t) => {
 - ✅ Full TypeScript implementation with strict type checking
 - ✅ Comprehensive error handling and input validation
 - ✅ Bug fixes (array mutation, error messages)
-- ✅ 88 tests - all passing
+- ✅ 122 tests - all passing
 - ✅ Complete documentation (README, CHANGELOG)
 - ✅ Type definitions (.d.ts files)
 - ✅ NPM package ready for publishing
@@ -258,6 +268,10 @@ test('functionName()', (t) => {
 - **Bug Fixes:** Array mutation in median/percentile, better validation
 - **Improvements:** DRY principle, simplified code, better performance
 - **Documentation:** Comprehensive API docs, migration guide, changelog
+
+### Resolved Issues
+- ✅ GitHub Issue #5: Add quartile function (resolved in v1.0.0)
+- ✅ GitHub Issue #8: Add correlation function (resolved - unreleased)
 
 ### Known Issues
 - None currently tracked
