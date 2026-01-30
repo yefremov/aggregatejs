@@ -3,7 +3,9 @@
  */
 
 import average from './average';
+import correlation from './correlation';
 import count from './count';
+import covariance from './covariance';
 import deviation from './deviation';
 import geometricMean from './geometricMean';
 import harmonicMean from './harmonicMean';
@@ -19,7 +21,9 @@ import variance from './variance';
 
 export {
   average,
+  correlation,
   count,
+  covariance,
   deviation,
   geometricMean,
   harmonicMean,
@@ -36,7 +40,9 @@ export {
 
 export default {
   average,
+  correlation,
   count,
+  covariance,
   deviation,
   geometricMean,
   harmonicMean,
