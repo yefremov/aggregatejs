@@ -1,4 +1,4 @@
-# aggregatejs [![CI](https://api.cirrus-ci.com/github/yefremov/aggregatejs.svg)](https://cirrus-ci.com/github/yefremov/aggregatejs) [![codecov](https://codecov.io/gh/yefremov/aggregatejs/branch/master/graph/badge.svg)](https://codecov.io/gh/yefremov/aggregatejs) [![npm version](https://badge.fury.io/js/aggregatejs.svg)](https://badge.fury.io/js/aggregatejs)
+# aggregatejs [![CI](https://api.cirrus-ci.com/github/yefremov/aggregatejs.svg)](https://cirrus-ci.com/github/yefremov/aggregatejs) [![codecov](https://codecov.io/gh/yefremov/aggregatejs/branch/master/graph/badge.svg?token=HWKSO2VZRJ)](https://codecov.io/gh/yefremov/aggregatejs) [![npm version](https://badge.fury.io/js/aggregatejs.svg)](https://badge.fury.io/js/aggregatejs)
 
 A comprehensive set of statistical and mathematical aggregation functions written in TypeScript.
 

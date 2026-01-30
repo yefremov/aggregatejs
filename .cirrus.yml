@@ -1,10 +1,6 @@
 task:
   name: Test on Node.js $NODE_VERSION
-  
   env:
-    # TODO: Replace with your encrypted token from: cirrus encrypt --repo yefremov/aggregatejs CODECOV_TOKEN=your_token
-    # Get your token from: https://codecov.io/gh/yefremov/aggregatejs/settings
-    CODECOV_TOKEN: ENCRYPTED[22d76791-63bf-47c3-863f-9a82b04b64b2]
     matrix:
       - NODE_VERSION: 18
       - NODE_VERSION: 20
