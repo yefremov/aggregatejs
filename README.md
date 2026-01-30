@@ -309,6 +309,32 @@ $ npm run build
 $ npm test
 ```
 
+### Running performance benchmarks
+
+Performance tests help measure and track the execution speed of aggregation functions across different dataset sizes.
+
+```bash
+# Run all performance benchmarks
+$ npm run perf
+
+# Run specific benchmark suites
+$ npm run perf:basic          # Basic statistics (average, sum, min, max, count, range)
+$ npm run perf:positional     # Positional statistics (median, percentile, quartiles)
+$ npm run perf:specialized    # Specialized functions (mode, variance, deviation, geometric/harmonic means)
+```
+
+**Performance Test Coverage:**
+- **Small datasets** (10 elements) - Typical use cases
+- **Medium datasets** (1,000 elements) - Common real-world scenarios
+- **Large datasets** (100,000 elements) - Stress testing
+- **Extra large datasets** (1,000,000 elements) - Extreme performance testing
+
+The benchmarks provide:
+- Operations per second (ops/sec)
+- Mean execution time
+- Margin of error
+- Sample size for statistical significance
+
 ### Clean build artifacts
 
 ```bash
