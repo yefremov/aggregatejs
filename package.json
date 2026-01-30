@@ -37,6 +37,8 @@
     "perf:basic": "ts-node test/performance/basic.bench.ts",
     "perf:positional": "ts-node test/performance/positional.bench.ts",
     "perf:specialized": "ts-node test/performance/specialized.bench.ts",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch",
     "clean": "rm -rf dist"
   },
   "files": [
@@ -63,6 +65,7 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",
     "ts-node": "^10.9.2",
+    "typedoc": "^0.28.16",
     "typescript": "^5.9.3"
   }
 }

@@ -1,0 +1,27 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "docs",
+  "name": "aggregatejs",
+  "readme": "README.md",
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "plugin": [],
+  "gitRevision": "master",
+  "gitRemote": "origin",
+  "sort": ["source-order"],
+  "navigation": {
+    "includeCategories": true,
+    "includeFolders": false
+  },
+  "categorizeByGroup": false,
+  "hideGenerator": false,
+  "searchInComments": true,
+  "visibilityFilters": {
+    "protected": false,
+    "private": false,
+    "inherited": true,
+    "external": false
+  }
+}
