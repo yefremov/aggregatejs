@@ -1,0 +1,56 @@
+task:
+  name: Test on Node.js $NODE_VERSION
+  
+  env:
+    # TODO: Replace with your encrypted token from: cirrus encrypt --repo yefremov/aggregatejs CODECOV_TOKEN=your_token
+    # Get your token from: https://codecov.io/gh/yefremov/aggregatejs/settings
+    CODECOV_TOKEN: ENCRYPTED[22d76791-63bf-47c3-863f-9a82b04b64b2]
+    matrix:
+      - NODE_VERSION: 18
+      - NODE_VERSION: 20
+      - NODE_VERSION: 22
+  
+  matrix:
+    - name: Test on Linux (Node $NODE_VERSION)
+      container:
+        image: node:${NODE_VERSION}
+      env:
+        OS: Linux
+    
+    - name: Test on macOS (Node 20 only)
+      macos_instance:
+        image: ghcr.io/cirruslabs/macos-ventura-base:latest
+      skip: $NODE_VERSION != "20"
+      env:
+        OS: macOS
+      install_node_script: |
+        brew install node@20
+        brew link --overwrite node@20
+    
+    - name: Test on Windows (Node 20 only)
+      windows_container:
+        image: node:20-windowsservercore-ltsc2019
+      skip: $NODE_VERSION != "20"
+      env:
+        OS: Windows
+  
+  install_script: npm ci
+  
+  test_script: npm run test-cov
+  
+  # Upload coverage to Codecov from Linux Node.js 20.x only
+  coverage_script: |
+    if [ "$NODE_VERSION" = "20" ] && [ "$OS" = "Linux" ]; then
+      # Create coverage directory if it doesn't exist
+      mkdir -p coverage
+      
+      # Generate coverage report
+      npm run report-cov
+      
+      # Download and install official Codecov uploader
+      curl -Os https://uploader.codecov.io/latest/linux/codecov
+      chmod +x codecov
+      
+      # Upload to Codecov
+      ./codecov -t ${CODECOV_TOKEN} -f coverage/lcov.info
+    fi

@@ -1,3 +1,7 @@
+# DEPRECATED: This project has migrated to GitHub Actions
+# See .github/workflows/ci.yml for the current CI configuration
+# This file is kept for historical reference only
+
 language: node_js
 node_js:
   - "6"
