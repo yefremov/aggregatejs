@@ -1,5 +1,9 @@
 # Node.js
 node_modules
 
+# TypeScript
+dist
+*.tsbuildinfo
+
 # Mac
 .DS_Store
