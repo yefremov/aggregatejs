@@ -1,7 +1,7 @@
 # Project Brief - aggregatejs
 
 **Last Updated:** 30/01/2026, 11:48 am (Europe/Riga, UTC+2:00)  
-**Version:** 1.1.1  
+**Version:** 1.2.1  
 **Repository:** https://github.com/yefremov/aggregatejs
 
 ---
