@@ -32,11 +32,13 @@
     "prepare": "npm run build",
     "test": "ts-node node_modules/tape/bin/tape test/*.ts | tap-spec",
     "test-cov": "nyc npm test",
-    "report-cov": "nyc report --reporter=text-lcov | coveralls",
+    "report-cov": "mkdir -p coverage && nyc report --reporter=text-lcov > coverage/lcov.info",
     "perf": "ts-node test/performance/all.bench.ts",
     "perf:basic": "ts-node test/performance/basic.bench.ts",
     "perf:positional": "ts-node test/performance/positional.bench.ts",
     "perf:specialized": "ts-node test/performance/specialized.bench.ts",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch",
     "clean": "rm -rf dist"
   },
   "files": [
@@ -58,11 +60,11 @@
     "@types/node": "^20.19.30",
     "@types/tape": "^5.8.1",
     "benchmark": "^2.1.4",
-    "coveralls": "^2.11.16",
-    "nyc": "^10.1.2",
+    "nyc": "^17.1.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",
     "ts-node": "^10.9.2",
+    "typedoc": "^0.28.16",
     "typescript": "^5.9.3"
   }
 }
